@@ -6,15 +6,19 @@ import MyEvents from './Pages/MyEvents';
 import Explore from './Pages/Explore';
 import Login from './Pages/Login';
 import Register from './Pages/Register';
+import DetailsCard from './Component/DetailsCard';
+import ErrorPage from './Pages/ErrorPage';
 
 const myCreatedRoute = createBrowserRouter([
         {
             path: "/",
             element: <MainLayout></MainLayout>,
+            errorElement: <ErrorPage></ErrorPage>,
             children: [
                 {
                     path: "/",
-                    element: <Home></Home>
+                    element: <Home></Home>,
+                    loader: ()=>fetch('SocialEvents.JSON')
                 },
                 {
                     path:"/myEvents",
@@ -31,6 +35,11 @@ const myCreatedRoute = createBrowserRouter([
                 {
                     path: "/register",
                     element:<Register></Register>
+                },
+                {
+                    path:"/allService/:id",
+                    element: <DetailsCard></DetailsCard>,
+                    loader: ()=>fetch('SocialEvents.JSON')
                 }
             ]
         }

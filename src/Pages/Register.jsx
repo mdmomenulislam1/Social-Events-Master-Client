@@ -1,3 +1,4 @@
+import { BsFacebook, BsGithub, BsGoogle } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 
@@ -38,6 +39,23 @@ const Register = () => {
                         
                         
 
+                    </div>
+
+
+                    <h3 className="text-center text-3xl p-5 font-bold"> Or </h3>
+                    <div className="flex justify-center items-center gap-10 mb-10">
+                        <Link className=" gap-2 flex justify-center items-center">
+                            <BsFacebook className="text-2xl"></BsFacebook>
+                            <button className="p-5 btn">Facebook</button>
+                        </Link>
+                        <Link className=" gap-2 flex justify-center items-center">
+                            <BsGoogle className="text-2xl"></BsGoogle>
+                            <button className="p-5 btn">Google</button>
+                        </Link>
+                        <Link className=" gap-2 flex justify-center items-center">
+                            <BsGithub className="text-2xl"></BsGithub>
+                            <button className="p-5 btn">Github</button>
+                        </Link>
                     </div>
                 </div>
             </div>

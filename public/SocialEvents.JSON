@@ -1,105 +1,94 @@
 {
-    "events": [
-      {
-        "id": 1,
-        "img": "https://example.com/wedding.jpg",
-        "title": "Wedding Celebration",
-        "price": "$10,000",
-        "description": "Celebrate your love in style with a grand wedding event. Our wedding package includes a beautiful venue, elegant decorations, gourmet catering, and a dedicated team to make your day truly special. Whether you're planning an intimate ceremony or a lavish affair, we'll ensure every detail is perfect. Create memories that will last a lifetime with our customizable wedding packages.",
-        "bg-color": "#ffebcd",
-        "text-color": "#000000",
-        "button-bg-color": "#ff4500"
-      },
-      {
-        "id": 2,
-        "img": "https://example.com/birthday.jpg",
-        "title": "Birthday Party",
-        "price": "$500",
-        "description": "Make your birthday a day to remember with a fun-filled party. Our birthday party package includes a colorful venue, themed decorations, delicious cake, and entertainment options like games and music. Whether you're turning 1 or 100, we'll create a memorable experience for you and your guests.",
-        "bg-color": "#87ceeb",
-        "text-color": "#000000",
-        "button-bg-color": "#ff69b4"
-      },
-      {
-        "id": 3,
-        "img": "https://example.com/anniversary.jpg",
-        "title": "Anniversary Celebration",
-        "price": "$1,200",
-        "description": "Celebrate your years of love and commitment with an anniversary party. Our anniversary package includes a romantic setting, candlelit dinner, live music, and personalized decorations. Whether it's your 10th or 50th anniversary, we'll help you cherish the moments that brought you together.",
-        "bg-color": "#ffc0cb",
-        "text-color": "#000000",
-        "button-bg-color": "#ff1493"
-      },
-      {
-        "id": 4,
-        "img": "https://example.com/engagement.jpg",
-        "title": "Engagement Party",
-        "price": "$800",
-        "description": "Announce your engagement with a glamorous party. Our engagement package offers a chic venue, sparkling decor, champagne toasts, and delectable hors d'oeuvres. Share the joyous news with family and friends in an elegant and unforgettable setting.",
-        "bg-color": "#ffe4e1",
-        "text-color": "#000000",
-        "button-bg-color": "#ff4500"
-      },
-      {
-        "id": 5,
-        "img": "https://example.com/retirement.jpg",
-        "title": "Retirement Party",
-        "price": "$600",
-        "description": "Bid farewell to your working days with a retirement party. Our retirement package includes a relaxed atmosphere, heartfelt speeches, and a retirement cake. Embrace the new chapter of life surrounded by colleagues and loved ones.",
-        "bg-color": "#c0c0c0",
-        "text-color": "#000000",
-        "button-bg-color": "#808080"
-      },
-      {
-        "id": 6,
-        "img": "https://example.com/babyshower.jpg",
-        "title": "Baby Shower",
-        "price": "$300",
-        "description": "Welcome the upcoming arrival of a bundle of joy with a baby shower. Our baby shower package offers a charming venue, baby-themed decorations, games, and a delightful menu. Celebrate the new addition to the family in style.",
-        "bg-color": "#87ceeb",
-        "text-color": "#000000",
-        "button-bg-color": "#ff69b4"
-      },
-      {
-        "id": 7,
-        "img": "https://example.com/holiday.jpg",
-        "title": "Holiday Party",
-        "price": "$750",
-        "description": "Spread holiday cheer with a festive holiday party. Our holiday package includes a winter wonderland theme, seasonal decorations, a gourmet feast, and entertainment for all. Gather with friends and family to celebrate the magic of the season.",
-        "bg-color": "#ff6347",
-        "text-color": "#000000",
-        "button-bg-color": "#ff4500"
-      },
-      {
-        "id": 8,
-        "img": "https://example.com/prom.jpg",
-        "title": "Prom Night",
-        "price": "$400",
-        "description": "Dance the night away at your high school prom. Our prom package offers a glamorous venue, themed decor, a DJ spinning the latest hits, and a photo booth for capturing memories with friends. Make your prom night unforgettable.",
-        "bg-color": "#ffe4b5",
-        "text-color": "#000000",
-        "button-bg-color": "#ffa500"
-      },
-      {
-        "id": 9,
-        "img": "https://example.com/reunion.jpg",
-        "title": "Class Reunion",
-        "price": "$500",
-        "description": "Reconnect with old friends at your class reunion. Our reunion package includes a nostalgic venue, yearbook-inspired decorations, a buffet of favorite school snacks, and a chance to reminisce about the good old days. Renew old friendships and create new memories.",
-        "bg-color": "#f0e68c",
-        "text-color": "#000000",
-        "button-bg-color": "#008000"
-      },
-      {
-        "id": 10,
-        "img": "https://example.com/farewell.jpg",
-        "title": "Farewell Party",
-        "price": "$350",
-        "description": "Bid farewell to a departing colleague or friend with a heartfelt farewell party. Our farewell package offers a warm setting, farewell speeches, and a memory-sharing session. Show your appreciation and send them off with best wishes.",
-        "bg-color": "#d3d3d3",
-        "text-color": "#000000",
-        "button-bg-color": "#a9a9a9"
-      }
-    ]
-  }
-  
+  "events": [
+    {
+      "id": 1,
+      "img": "https://i.ibb.co/kQw9n97/sunset-698501-640.jpg",
+      "title": "Wedding",
+      "name": "John and Emily's Wedding",
+      "price": "$15,000",
+      "short_description": "Elegant and romantic celebration of love.",
+      "description": "John and Emily's wedding is a grand celebration of love and commitment. This elegant event will be held in a beautiful countryside venue with stunning views. Guests will enjoy a memorable evening filled with delicious food, music, and dancing. Join us in celebrating this special day with the newlyweds!"
+    },
+    {
+      "id": 2,
+      "img": "https://i.ibb.co/9sTKgDb/birthday-2338813-1280.jpg",
+      "title": "Birthday Party",
+      "name": "Sarah's 30th Birthday Bash",
+      "price": "$500",
+      "short_description": "A fun-filled birthday celebration!",
+      "description": "Join us in celebrating Sarah's 30th birthday with a fun-filled party! There will be games, delicious food, and a lively atmosphere. Whether you're young or young at heart, this birthday bash is the perfect place to have a good time. Don't miss out on the excitement!"
+    },
+    {
+      "id": 3,
+      "img": "https://i.ibb.co/Qf2K0Tc/love-1536226-640.jpg",
+      "title": "Anniversary",
+      "name": "Mark and Lisa's 25th Anniversary",
+      "price": "$8,000",
+      "short_description": "A silver jubilee of love and togetherness.",
+      "description": "Mark and Lisa are celebrating their 25th wedding anniversary, and you're invited to join in the festivities! This special event will be a night to remember, with a romantic dinner, dancing, and heartwarming speeches. Come and celebrate their enduring love story with us!"
+    },
+    {
+      "id": 4,
+      "img": "https://i.ibb.co/yfkDQJ8/wedding-1951298-1280.jpg",
+      "title": "Engagement Party",
+      "name": "Alex and Olivia's Engagement Soiree",
+      "price": "$2,500",
+      "short_description": "A joyous occasion to celebrate their love story.",
+      "description": "Alex and Olivia are thrilled to announce their engagement! Join us for a delightful evening filled with laughter and love. The engagement party will feature delicious hors d'oeuvres, champagne toasts, and heartwarming speeches from the happy couple. Let's raise a glass to their future together!"
+    },
+    {
+      "id": 5,
+      "img": "https://i.ibb.co/VqYcRFK/istockphoto-535199657-612x612.webp",
+      "title": "Retirement Party",
+      "name": "David's Retirement Celebration",
+      "price": "$1,200",
+      "short_description": "Wishing David a happy retirement!",
+      "description": "After years of dedicated service, David is finally retiring. Join us in celebrating his well-deserved retirement with good food, great company, and fond memories. It's a time to honor his accomplishments and wish him all the best in this new chapter of life!"
+    },
+    {
+      "id": 6,
+      "img": "https://i.ibb.co/fFKWGHn/istockphoto-1281043355-612x612.webp",
+      "title": "Baby Shower",
+      "name": "Emily's Baby Shower",
+      "price": "$500",
+      "short_description": "A sweet celebration for the mom-to-be.",
+      "description": "Let's shower Emily with love and best wishes as she prepares to welcome her bundle of joy! This baby shower will be a delightful afternoon filled with games, gifts, and sweet treats. Join us in celebrating this special moment in Emily's life."
+    },
+    {
+      "id": 7,
+      "img": "https://i.ibb.co/YTj98q2/istockphoto-1133752237-612x612.webp",
+      "title": "Graduation Party",
+      "name": "Megan's Graduation Celebration",
+      "price": "$800",
+      "short_description": "Congratulations, Megan!",
+      "description": "Megan has successfully graduated, and it's time to celebrate her achievements! Join us for a graduation party filled with joy, laughter, and great food. We'll be raising a toast to Megan's bright future and all the hard work that got her here."
+    },
+    {
+      "id": 8,
+      "img": "https://i.ibb.co/5Y6NZ1r/table-3018151-640.jpg",
+      "title": "Holiday Party",
+      "name": "Annual Holiday Extravaganza",
+      "price": "$1,000",
+      "short_description": "Spread the holiday cheer!",
+      "description": "Get ready for the most festive event of the year! Our annual holiday extravaganza is here to spread joy and merriment. Join us for a night of holiday-themed decorations, delicious seasonal dishes, and dancing to your favorite tunes. Let's celebrate the magic of the season together!"
+    },
+    {
+      "id": 9,
+      "img": "https://i.ibb.co/MBVrRw6/affair-1238434-640.jpg",
+      "title": "Housewarming Party",
+      "name": "Jack and Lily's New Home Celebration",
+      "price": "$300",
+      "short_description": "Warmly welcoming friends to their new abode.",
+      "description": "Jack and Lily have a new place to call home, and they want to celebrate it with you! Join us for a housewarming party filled with laughter, good company, and a tour of their lovely new house. It's a great opportunity to catch up and create new memories."
+    },
+    {
+      "id": 10,
+      "img": "https://i.ibb.co/Drs4cdY/party-8080105-640.webp",
+      "title": "Class Reunion",
+      "name": "Class of 2000 Reunion",
+      "price": "$600",
+      "short_description": "Reconnecting with old friends and reliving memories.",
+      "description": "It's time to relive the good old days! The Class of 2000 is hosting a reunion, and we hope you'll be there to reconnect with old friends, reminisce about school days, and create new memories. Join us for a night of nostalgia and fun!"
+    }
+  ]
+}
