@@ -1,0 +1,105 @@
+{
+    "events": [
+      {
+        "id": 1,
+        "img": "https://example.com/wedding.jpg",
+        "title": "Wedding Celebration",
+        "price": "$10,000",
+        "description": "Celebrate your love in style with a grand wedding event. Our wedding package includes a beautiful venue, elegant decorations, gourmet catering, and a dedicated team to make your day truly special. Whether you're planning an intimate ceremony or a lavish affair, we'll ensure every detail is perfect. Create memories that will last a lifetime with our customizable wedding packages.",
+        "bg-color": "#ffebcd",
+        "text-color": "#000000",
+        "button-bg-color": "#ff4500"
+      },
+      {
+        "id": 2,
+        "img": "https://example.com/birthday.jpg",
+        "title": "Birthday Party",
+        "price": "$500",
+        "description": "Make your birthday a day to remember with a fun-filled party. Our birthday party package includes a colorful venue, themed decorations, delicious cake, and entertainment options like games and music. Whether you're turning 1 or 100, we'll create a memorable experience for you and your guests.",
+        "bg-color": "#87ceeb",
+        "text-color": "#000000",
+        "button-bg-color": "#ff69b4"
+      },
+      {
+        "id": 3,
+        "img": "https://example.com/anniversary.jpg",
+        "title": "Anniversary Celebration",
+        "price": "$1,200",
+        "description": "Celebrate your years of love and commitment with an anniversary party. Our anniversary package includes a romantic setting, candlelit dinner, live music, and personalized decorations. Whether it's your 10th or 50th anniversary, we'll help you cherish the moments that brought you together.",
+        "bg-color": "#ffc0cb",
+        "text-color": "#000000",
+        "button-bg-color": "#ff1493"
+      },
+      {
+        "id": 4,
+        "img": "https://example.com/engagement.jpg",
+        "title": "Engagement Party",
+        "price": "$800",
+        "description": "Announce your engagement with a glamorous party. Our engagement package offers a chic venue, sparkling decor, champagne toasts, and delectable hors d'oeuvres. Share the joyous news with family and friends in an elegant and unforgettable setting.",
+        "bg-color": "#ffe4e1",
+        "text-color": "#000000",
+        "button-bg-color": "#ff4500"
+      },
+      {
+        "id": 5,
+        "img": "https://example.com/retirement.jpg",
+        "title": "Retirement Party",
+        "price": "$600",
+        "description": "Bid farewell to your working days with a retirement party. Our retirement package includes a relaxed atmosphere, heartfelt speeches, and a retirement cake. Embrace the new chapter of life surrounded by colleagues and loved ones.",
+        "bg-color": "#c0c0c0",
+        "text-color": "#000000",
+        "button-bg-color": "#808080"
+      },
+      {
+        "id": 6,
+        "img": "https://example.com/babyshower.jpg",
+        "title": "Baby Shower",
+        "price": "$300",
+        "description": "Welcome the upcoming arrival of a bundle of joy with a baby shower. Our baby shower package offers a charming venue, baby-themed decorations, games, and a delightful menu. Celebrate the new addition to the family in style.",
+        "bg-color": "#87ceeb",
+        "text-color": "#000000",
+        "button-bg-color": "#ff69b4"
+      },
+      {
+        "id": 7,
+        "img": "https://example.com/holiday.jpg",
+        "title": "Holiday Party",
+        "price": "$750",
+        "description": "Spread holiday cheer with a festive holiday party. Our holiday package includes a winter wonderland theme, seasonal decorations, a gourmet feast, and entertainment for all. Gather with friends and family to celebrate the magic of the season.",
+        "bg-color": "#ff6347",
+        "text-color": "#000000",
+        "button-bg-color": "#ff4500"
+      },
+      {
+        "id": 8,
+        "img": "https://example.com/prom.jpg",
+        "title": "Prom Night",
+        "price": "$400",
+        "description": "Dance the night away at your high school prom. Our prom package offers a glamorous venue, themed decor, a DJ spinning the latest hits, and a photo booth for capturing memories with friends. Make your prom night unforgettable.",
+        "bg-color": "#ffe4b5",
+        "text-color": "#000000",
+        "button-bg-color": "#ffa500"
+      },
+      {
+        "id": 9,
+        "img": "https://example.com/reunion.jpg",
+        "title": "Class Reunion",
+        "price": "$500",
+        "description": "Reconnect with old friends at your class reunion. Our reunion package includes a nostalgic venue, yearbook-inspired decorations, a buffet of favorite school snacks, and a chance to reminisce about the good old days. Renew old friendships and create new memories.",
+        "bg-color": "#f0e68c",
+        "text-color": "#000000",
+        "button-bg-color": "#008000"
+      },
+      {
+        "id": 10,
+        "img": "https://example.com/farewell.jpg",
+        "title": "Farewell Party",
+        "price": "$350",
+        "description": "Bid farewell to a departing colleague or friend with a heartfelt farewell party. Our farewell package offers a warm setting, farewell speeches, and a memory-sharing session. Show your appreciation and send them off with best wishes.",
+        "bg-color": "#d3d3d3",
+        "text-color": "#000000",
+        "button-bg-color": "#a9a9a9"
+      }
+    ]
+  }
+  
