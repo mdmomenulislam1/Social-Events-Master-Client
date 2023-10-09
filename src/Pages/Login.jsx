@@ -1,8 +1,36 @@
+import { useContext } from "react";
 import { BsFacebook, BsGithub, BsGoogle } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import AuthProvider, { AuthContext } from "../Firebase/AuthProvider";
+import { Result } from "postcss";
 
 
 const Login = () => {
+    const { signIn } = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
+    console.log('location i n the login page', location)
+
+    const handleLogin = e => {
+        e.preventDefault();
+        console.log(e.currentTarget);
+        const form = new FormData(e.currentTarget);
+        const email = form.get('email');
+        const password = form.get('password');
+        console.log(email, password);
+        signIn(email, password)
+            .then(result => {
+                console.log(result.user);
+
+                // navigate after login
+                navigate(location?.state ? location.state : '/');
+
+            })
+            .catch(error => {
+                console.error(error);
+            })
+    }
+
     return (
         <div className="px-14 mx-auto">
 
@@ -26,7 +54,7 @@ const Login = () => {
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                                <button className="bg-red-700 font-bold text-center text-white p-3 rounded-lg">Login</button>
+                                <button onAuxClick={handleLogin} className="bg-red-700 font-bold text-center text-white p-3 rounded-lg">Login</button>
                             </div>
                         </form>
 
@@ -43,7 +71,7 @@ const Login = () => {
                             <BsFacebook className="text-2xl"></BsFacebook>
                             <button className="p-5 btn">Facebook</button>
                         </Link>
-                        <Link className=" gap-2 flex justify-center items-center">
+                        <Link onClick={handleLogin} className=" gap-2 flex justify-center items-center">
                             <BsGoogle className="text-2xl"></BsGoogle>
                             <button className="p-5 btn">Google</button>
                         </Link>

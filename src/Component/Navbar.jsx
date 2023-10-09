@@ -23,12 +23,12 @@ const Navbar = () => {
                     </NavLink></li>
 
                     <li><NavLink
-                        to="/myEvents"
+                        to="/AboutUs"
                         className={({ isActive, isPending }) =>
                             isPending ? "" : isActive ? "bg-black text-white  font-bold" : "text-black bg-white  font-bold"
                         }
                     >
-                        My Events
+                        About Us
                     </NavLink></li>
 
                     <li><NavLink
@@ -77,12 +77,12 @@ const Navbar = () => {
                     </NavLink></li>
 
                     <li><NavLink
-                        to="/myEvents"
+                        to="/AboutUs"
                         className={({ isActive, isPending }) =>
                             isPending ? "" : isActive ? "bg-black text-white  font-bold" : "text-black bg-white  font-bold"
                         }
                     >
-                        My Events
+                        About Us
                     </NavLink></li>
 
                     <li><NavLink

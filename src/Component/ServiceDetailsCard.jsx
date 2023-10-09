@@ -11,7 +11,6 @@ const ServiceDetailsCard = ({ service }) => {
   const handleAddToService = () => {
 
     const addServedItemArr = [];
-
     const ServedItem = JSON.parse(localStorage.getItem('Served'))
     if (!ServedItem) {
       addServedItemArr.push(service)
