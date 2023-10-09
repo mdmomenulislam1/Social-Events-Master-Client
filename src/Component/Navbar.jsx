@@ -1,8 +1,17 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { BsPersonAdd } from "react-icons/bs";
+import { AuthContext } from "../Firebase/AuthProvider";
+import { useContext } from "react";
 
 
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleSignOut = () => {
+        logOut()
+            .then()
+            .catch()
+    }
 
 
     return (
@@ -117,7 +126,17 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                 <BsPersonAdd className="text-3xl font-bold mx-5"></BsPersonAdd>
-                <a className="btn">Log In / Log Out </a>
+            {
+                user?
+                <button onClick={handleSignOut} className="btn">Log Out</button>
+                :
+                <Link to={"/login"}>
+                <button className="btn">Log In</button>
+                </Link>
+            }
+                
+            
+                
 
             </div>
         </div>
