@@ -6,7 +6,7 @@ const Navbar = () => {
 
 
     return (
-        <div className="navbar bg-orange-200 lg:px-16 lg:py-5">
+        <div className="navbar bg-neutral lg:px-16 lg:py-5">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -16,7 +16,7 @@ const Navbar = () => {
                     <li><NavLink
                         to="/"
                         className={({ isActive, isPending }) =>
-                            isPending ? "" : isActive ? "bg-black text-white  font-bold" : "text-black bg-white  font-bold"
+                            isPending ? "" : isActive ? "bg-black text-white  font-bold" : "text-black bg-white  font-bold hover:text-white hover:bg-green"
                         }
                     >
                         Home

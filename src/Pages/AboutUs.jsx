@@ -5,6 +5,7 @@ const AboutUs = () => {
         <div className="px-14 mx-auto my-10">
             <h2 className="text-3xl font-bold">About Us</h2>
             <p className="text-justify text-2xl my-5">
+            <h2 className="text-3xl font-bold text-center my-5">Social Events Master</h2>
                 Social events play a vital role in human society, offering a unique opportunity for people to come together and celebrate various milestones, relationships, and shared experiences. These gatherings, ranging from weddings and birthday parties to anniversaries and retirement celebrations, hold a special place in our hearts. They not only mark significant moments in our lives but also create lasting memories that bind us to friends and family.
 
                 In this extensive exploration, we delve into the world of social events, examining their cultural significance, historical roots, and the profound impact they have on individuals and communities. Whether you're planning an event, attending one, or simply curious about the rich tapestry of human celebrations, this guide will take you on a journey through the art of celebrating life.
