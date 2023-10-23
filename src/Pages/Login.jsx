@@ -79,6 +79,7 @@ const Login = () => {
                 <div className="py-10 text-center font-bold">
                     <p className="my-3">Welcome to our World</p>
                     <p className="my-3">Name: {user?.displayName}</p>
+                    <img src="https://i.ibb.co/FzKkyS3/1e769b3a675977651b76790a90591eb1.jpg" alt="" className="rounded-full mx-auto my-3" />
                     <img src={user?.photoURL} alt="" className="rounded-full mx-auto my-3" />
                     <p className="my-3">Email: {user?.email}</p>
 

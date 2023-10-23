@@ -56,7 +56,7 @@ const DashBoard = () => {
               <DashboardCard key={service.id} service={service}></DashboardCard>
             ))
 
-              : order.slice(0, 2).map((service) => (
+              : order.slice(0, 10).map((service) => (
                 <DashboardCard key={service.id} service={service}></DashboardCard>
               ))
           }

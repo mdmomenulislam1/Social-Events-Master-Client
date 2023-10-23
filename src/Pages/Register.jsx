@@ -56,9 +56,11 @@ const Register = () => {
     return (
         <div className="px-14 mx-auto shadow-2xl">
             {user ? <div className="py-10 text-center font-bold">
+                
+                <img src={user?.photoURL} alt="" className="rounded-full mx-auto my-3" />
+                <img className="rounded-full mx-auto my-3" src="https://i.ibb.co/8cbwwGw/welcome-poster-blue-design-template-b92f38c3b08a5ed4efd360e12f1aef7b-screen.jpg" alt="" />
                 <p className="my-3">Welcome to our World</p>
                 <p className="my-3">Name: {user?.displayName}</p>
-                <img src={user?.photoURL} alt="" className="rounded-full mx-auto my-3" />
                 <p className="my-3">Email: {user?.email}</p>
             </div> :
                 <>

@@ -1,3 +1,5 @@
+Live link: [https://musical-sorbet-babb75.netlify.app]
+
 # Three key features of Social Events Master:
 
 ## Event Planning Tools:
