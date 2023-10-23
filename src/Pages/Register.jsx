@@ -10,7 +10,6 @@ const Register = () => {
 
     const handleRegister = e => {
         e.preventDefault();
-        console.log(e.currentTarget);
         const form = new FormData(e.currentTarget);
 
         const name = form.get('name');
@@ -19,14 +18,23 @@ const Register = () => {
         const password = form.get('password');
         console.log(name, email, password);
 
+        if (!/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/.test(password)) {
+            alert("Minimum eight characters, at least one letter, one number and one special character");
+            
+        }
+        else{
+            alert("Fine");
+            createUser(email, password).then((result)=> {
+                console.log(result.user)});
+        }
         // create user
-        createUser(email, password)
-            .then(result => {
-                console.log(result.user)
-            })
-            .catch(error => {
-                console.error(error)
-            })
+    //     createUser(email, password)
+    //         .then(result => {
+    //             console.log(result.user)
+    //         })
+    //         .catch(error => {
+    //             console.error(error)
+    //         })
 
     }
 
@@ -41,19 +49,19 @@ const Register = () => {
                                 <label className="label">
                                     <span className="label-text text-white text-2xl font-semibold">Name</span>
                                 </label>
-                                <input type="name" placeholder="Name" className="input input-bordered text-black" required />
+                                <input type="name" name="name"  placeholder="Name" className="input input-bordered text-black" required />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text text-white text-2xl font-semibold">Email</span>
                                 </label>
-                                <input type="email" placeholder="Email" className="input input-bordered text-black" required />
+                                <input type="email" name="email" placeholder="Email" className="input input-bordered text-black" required />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text text-white text-2xl font-semibold">Password</span>
                                 </label>
-                                <input type="password" placeholder="Password" className="input input-bordered text-black" required />
+                                <input type="password" name="password"  placeholder="Password" className="input input-bordered text-black" required />
                                 <label className="label">
                                     <a href="#" className="label-text-alt text-white link link-hover font-semibold">Forgot password?</a>
                                 </label>
@@ -72,17 +80,10 @@ const Register = () => {
 
                     <h3 className="text-center text-3xl p-5 font-bold"> Or </h3>
                     <div className="flex justify-center items-center gap-10 mb-10">
-                        <Link className=" gap-2 flex justify-center items-center">
-                            <BsFacebook className="text-2xl"></BsFacebook>
-                            <button className="p-5 btn">Facebook</button>
-                        </Link>
+            
                         <Link className=" gap-2 flex justify-center items-center">
                             <BsGoogle className="text-2xl"></BsGoogle>
                             <button className="p-5 btn">Google</button>
-                        </Link>
-                        <Link className=" gap-2 flex justify-center items-center">
-                            <BsGithub className="text-2xl"></BsGithub>
-                            <button className="p-5 btn">Github</button>
                         </Link>
                     </div>
                 </div>

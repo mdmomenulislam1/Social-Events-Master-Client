@@ -5,7 +5,7 @@
       "img": "https://i.ibb.co/kQw9n97/sunset-698501-640.jpg",
       "title": "Wedding",
       "name": "John and Emily's Wedding",
-      "price": "$15,000",
+      "price": 15000,
       "short_description": "Elegant and romantic celebration of love.",
       "description": "John and Emily's wedding is a grand celebration of love and commitment. This elegant event will be held in a beautiful countryside venue with stunning views. Guests will enjoy a memorable evening filled with delicious food, music, and dancing. Join us in celebrating this special day with the newlyweds!"
     },
@@ -14,7 +14,7 @@
       "img": "https://i.ibb.co/9sTKgDb/birthday-2338813-1280.jpg",
       "title": "Birthday Party",
       "name": "Sarah's 30th Birthday Bash",
-      "price": "$500",
+      "price": 500,
       "short_description": "A fun-filled birthday celebration!",
       "description": "Join us in celebrating Sarah's 30th birthday with a fun-filled party! There will be games, delicious food, and a lively atmosphere. Whether you're young or young at heart, this birthday bash is the perfect place to have a good time. Don't miss out on the excitement!"
     },
@@ -23,7 +23,7 @@
       "img": "https://i.ibb.co/Qf2K0Tc/love-1536226-640.jpg",
       "title": "Anniversary",
       "name": "Mark and Lisa's 25th Anniversary",
-      "price": "$8,000",
+      "price": 8000,
       "short_description": "A silver jubilee of love and togetherness.",
       "description": "Mark and Lisa are celebrating their 25th wedding anniversary, and you're invited to join in the festivities! This special event will be a night to remember, with a romantic dinner, dancing, and heartwarming speeches. Come and celebrate their enduring love story with us!"
     },
@@ -32,7 +32,7 @@
       "img": "https://i.ibb.co/yfkDQJ8/wedding-1951298-1280.jpg",
       "title": "Engagement Party",
       "name": "Alex and Olivia's Engagement Soiree",
-      "price": "$2,500",
+      "price": 2500,
       "short_description": "A joyous occasion to celebrate their love story.",
       "description": "Alex and Olivia are thrilled to announce their engagement! Join us for a delightful evening filled with laughter and love. The engagement party will feature delicious hors d'oeuvres, champagne toasts, and heartwarming speeches from the happy couple. Let's raise a glass to their future together!"
     },
@@ -41,7 +41,7 @@
       "img": "https://i.ibb.co/VqYcRFK/istockphoto-535199657-612x612.webp",
       "title": "Retirement Party",
       "name": "David's Retirement Celebration",
-      "price": "$1,200",
+      "price": 1200,
       "short_description": "Wishing David a happy retirement!",
       "description": "After years of dedicated service, David is finally retiring. Join us in celebrating his well-deserved retirement with good food, great company, and fond memories. It's a time to honor his accomplishments and wish him all the best in this new chapter of life!"
     },
@@ -50,7 +50,7 @@
       "img": "https://i.ibb.co/fFKWGHn/istockphoto-1281043355-612x612.webp",
       "title": "Baby Shower",
       "name": "Emily's Baby Shower",
-      "price": "$500",
+      "price": 500,
       "short_description": "A sweet celebration for the mom-to-be.",
       "description": "Let's shower Emily with love and best wishes as she prepares to welcome her bundle of joy! This baby shower will be a delightful afternoon filled with games, gifts, and sweet treats. Join us in celebrating this special moment in Emily's life."
     },
@@ -59,7 +59,7 @@
       "img": "https://i.ibb.co/YTj98q2/istockphoto-1133752237-612x612.webp",
       "title": "Graduation Party",
       "name": "Megan's Graduation Celebration",
-      "price": "$800",
+      "price": 800,
       "short_description": "Congratulations, Megan!",
       "description": "Megan has successfully graduated, and it's time to celebrate her achievements! Join us for a graduation party filled with joy, laughter, and great food. We'll be raising a toast to Megan's bright future and all the hard work that got her here."
     },
@@ -68,8 +68,7 @@
       "img": "https://i.ibb.co/5Y6NZ1r/table-3018151-640.jpg",
       "title": "Holiday Party",
       "name": "Annual Holiday Extravaganza",
-      "price": "$1,000",
-      "short_description": "Spread the holiday cheer!",
+      "price": 1000, "short_description": "Spread the holiday cheer!",
       "description": "Get ready for the most festive event of the year! Our annual holiday extravaganza is here to spread joy and merriment. Join us for a night of holiday-themed decorations, delicious seasonal dishes, and dancing to your favorite tunes. Let's celebrate the magic of the season together!"
     },
     {

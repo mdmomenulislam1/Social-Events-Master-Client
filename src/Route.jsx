@@ -8,6 +8,7 @@ import DetailsCard from './Component/DetailsCard';
 import ErrorPage from './Pages/ErrorPage';
 import AboutUs from './Pages/aboutUs';
 import PrivateRoute from './Firebase/PrivateRoute';
+import DashBoard from './Component/DashBoard';
 
 
 const myCreatedRoute = createBrowserRouter([
@@ -37,6 +38,10 @@ const myCreatedRoute = createBrowserRouter([
             {
                 path: "/register",
                 element: <Register></Register>
+            },
+            {
+                path: "/dashboard",
+                element: <PrivateRoute><DashBoard></DashBoard></PrivateRoute>
             },
             {
                 path: "/allService/:id",

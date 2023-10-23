@@ -9,7 +9,7 @@ import app from "../firebase/firebase.config";
 
 const Login = () => {
     const auth = getAuth(app);
-    const provider = GoogleAuthProvider();
+    const provider = new GoogleAuthProvider();
     const handleGoogleSignIn = ()=>{
         signInWithPopup(auth, provider)
         .then()
@@ -24,10 +24,9 @@ const Login = () => {
 
     const handleLogin = e => {
         e.preventDefault();
-        console.log(e.currentTarget);
-        const form = new FormData(e.currentTarget);
-        const email = form.get('email');
-        const password = form.get('password');
+        const form = e.target;
+        const email = form.email.value;
+        const password = form.password.value;
         console.log(email, password);
         signIn(email, password)
             .then(result => {
@@ -38,7 +37,7 @@ const Login = () => {
 
             })
             .catch(error => {
-                console.error(error);
+                console.log(error);
             })
     }
 
@@ -53,19 +52,19 @@ const Login = () => {
                                 <label className="label">
                                     <span className="label-text text-white text-2xl font-semibold">Email</span>
                                 </label>
-                                <input type="email" placeholder="Email" className="input input-bordered text-black" required />
+                                <input type="email" name="email" placeholder="Email" className="input input-bordered text-black" required />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text text-white text-2xl font-semibold">Password</span>
                                 </label>
-                                <input type="password" placeholder="Password" className="input input-bordered  text-black" required />
+                                <input type="password" name="password" placeholder="Password" className="input input-bordered  text-black" required />
                                 <label className="label">
                                     <a href="#" className="label-text-alt text-white link link-hover font-semibold">Forgot password?</a>
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                                <button onAuxClick={handleLogin} className="bg-red-700 font-bold text-center text-white p-3 rounded-lg">Login</button>
+                                <button className="bg-red-700 font-bold text-center text-white p-3 rounded-lg">Login</button>
                             </div>
                         </form>
 
