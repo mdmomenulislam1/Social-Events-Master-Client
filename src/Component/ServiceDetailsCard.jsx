@@ -3,13 +3,9 @@ import React from 'react';
 import swal from "sweetalert";
 
 const ServiceDetailsCard = ({ service }) => {
-    
-
   const { id, img, title, price, description } = service || {}
-
-
+  
   const handleAddToService = () => {
-
     const addServedItemArr = [];
     const ServedItem = JSON.parse(localStorage.getItem('Served'))
     if (!ServedItem) {
@@ -19,7 +15,7 @@ const ServiceDetailsCard = ({ service }) => {
     }
 
     else {
-      const isExists = ServedItem.find(service => service.id === id)
+      const isExists = ServedItem.find(service => service.id == id)
 
       if (!isExists) {
         addServedItemArr.push(...ServedItem, service)

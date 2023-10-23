@@ -1,5 +1,4 @@
-{
-  "events": [
+ [
     {
       "id": 1,
       "img": "https://i.ibb.co/kQw9n97/sunset-698501-640.jpg",
@@ -68,7 +67,8 @@
       "img": "https://i.ibb.co/5Y6NZ1r/table-3018151-640.jpg",
       "title": "Holiday Party",
       "name": "Annual Holiday Extravaganza",
-      "price": 1000, "short_description": "Spread the holiday cheer!",
+      "price": 1000,
+      "short_description": "Spread the holiday cheer!",
       "description": "Get ready for the most festive event of the year! Our annual holiday extravaganza is here to spread joy and merriment. Join us for a night of holiday-themed decorations, delicious seasonal dishes, and dancing to your favorite tunes. Let's celebrate the magic of the season together!"
     },
     {
@@ -76,7 +76,7 @@
       "img": "https://i.ibb.co/MBVrRw6/affair-1238434-640.jpg",
       "title": "Housewarming Party",
       "name": "Jack and Lily's New Home Celebration",
-      "price": "$300",
+      "price": 300,
       "short_description": "Warmly welcoming friends to their new abode.",
       "description": "Jack and Lily have a new place to call home, and they want to celebrate it with you! Join us for a housewarming party filled with laughter, good company, and a tour of their lovely new house. It's a great opportunity to catch up and create new memories."
     },
@@ -85,9 +85,9 @@
       "img": "https://i.ibb.co/Drs4cdY/party-8080105-640.webp",
       "title": "Class Reunion",
       "name": "Class of 2000 Reunion",
-      "price": "$600",
+      "price": 600,
       "short_description": "Reconnecting with old friends and reliving memories.",
       "description": "It's time to relive the good old days! The Class of 2000 is hosting a reunion, and we hope you'll be there to reconnect with old friends, reminisce about school days, and create new memories. Join us for a night of nostalgia and fun!"
     }
   ]
-}
+

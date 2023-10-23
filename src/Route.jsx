@@ -44,7 +44,7 @@ const myCreatedRoute = createBrowserRouter([
                 element: <PrivateRoute><DashBoard></DashBoard></PrivateRoute>
             },
             {
-                path: "/allService/:id",
+                path: "/services/:id",
                 element: <PrivateRoute><DetailsCard></DetailsCard></PrivateRoute>,
                 loader: () => fetch('SocialEvents.JSON')
             }

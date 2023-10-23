@@ -3,11 +3,8 @@ import Banner from "../Component/Banner";
 import React from 'react'
 import ServiceCard from "../Component/ServiceCard";
 
-
 const Home = () => {
-
     const services = useLoaderData();
-    const allService = services.events;
 
     const containerStyle = {
         backgroundImage: `url('https://i.ibb.co/dgXcv7D/istockphoto-1399000012-612x612.webp'), linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(9, 9, 9, 0.8))`,
@@ -19,7 +16,7 @@ const Home = () => {
         padding: '20px',
         borderRadius: '5px',
     };
-    // const {id, title, name, price, description, img} = service || {}
+    
 
 
 
@@ -29,7 +26,7 @@ const Home = () => {
             <h2 className="text-5xl font-bold text-black text-center my-10">Services</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 px-5 lg:px-0 lg:grid-cols-4 gap-16 md:gap-5 lg:gap-8 my-10">
                 {
-                    allService.map(service => <ServiceCard key={service.id} service={service}></ServiceCard>)
+                    services?.map(service => <ServiceCard key={service.id} service={service}></ServiceCard>)
                 }
             </div>
 
@@ -53,7 +50,7 @@ const Home = () => {
                     <div className="text-center">
                         <img className="m-auto mb-5 rounded-full w-[200px] h-[200px]" src="https://i.ibb.co/XFnM7Gf/istockphoto-1398845106-612x612.webp" alt="" />
                         <h1 className="text-3xl text-white font-bold mb-2">Awlad Hossain</h1>
-                        <h3 className="text-2xl text-white font-semibold">Fruits Expert</h3>
+                        <h3 className="text-2xl text-white font-semibold">Event Planner</h3>
                         <div className="mt-2">
                             <i className="pr-3 text-2xl fa-brands fa-facebook text-orange-700"></i>
                             <i className="pr-3 text-2xl fa-brands fa-twitter text-orange-700"></i>
@@ -65,7 +62,7 @@ const Home = () => {
                     <div className="text-center">
                         <img className="m-auto mb-5 rounded-full w-[200px] h-[200px]" src="https://i.ibb.co/7S31TCk/istockphoto-1178146180-612x612.webp" alt="" />
                         <h1 className="text-3xl text-white font-bold mb-2">Safia Chowdhury</h1>
-                        <h3 className="text-2xl text-white font-semibold">Fruits Expert</h3>
+                        <h3 className="text-2xl text-white font-semibold">Creative Director</h3>
                         <div className="mt-2">
                             <i className="pr-3 text-2xl fa-brands fa-facebook text-orange-700"></i>
                             <i className="pr-3 text-2xl fa-brands fa-twitter text-orange-700"></i>
@@ -77,7 +74,7 @@ const Home = () => {
                     <div className="text-center">
                         <img className="m-auto mb-5 rounded-full w-[200px] h-[200px]" src="https://i.ibb.co/Smj8dT3/model-2911322-640.jpg" alt="" />
                         <h1 className="text-3xl text-white font-bold mb-2">Rokib Hossain</h1>
-                        <h3 className="text-2xl text-white font-semibold">Fruits Expert</h3>
+                        <h3 className="text-2xl text-white font-semibold">Sales and Marketing Manager</h3>
                         <div className="mt-2">
                             <i className="pr-3 text-2xl fa-brands fa-facebook text-orange-700"></i>
                             <i className="pr-3 text-2xl fa-brands fa-twitter text-orange-700"></i>
@@ -89,7 +86,7 @@ const Home = () => {
                     <div className="text-center">
                         <img className="m-auto mb-5 rounded-full w-[200px] h-[200px]" src="https://i.ibb.co/L6hrJrZ/friend-6236329-640.jpg" alt="" />
                         <h1 className="text-3xl text-white font-bold mb-2">Chaity</h1>
-                        <h3 className="text-2xl text-white font-semibold">Fruits Expert</h3>
+                        <h3 className="text-2xl text-white font-semibold">Logistics and Operations Manager</h3>
                         <div className="mt-2">
                             <i className="pr-3 text-2xl fa-brands fa-facebook text-orange-700"></i>
                             <i className="pr-3 text-2xl fa-brands fa-twitter text-orange-700"></i>

@@ -1,93 +1,111 @@
-import { BsFacebook, BsGithub, BsGoogle } from "react-icons/bs";
+import { BsEye, BsEyeSlash, BsFacebook, BsGithub, BsGoogle } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { AuthContext } from "../Firebase/AuthProvider";
+import { GoogleAuthProvider, getAuth, sendEmailVerification, signInWithPopup } from "firebase/auth";
+import auth from "../Firebase/firebase.config";
+import app from "../firebase/firebase.config";
+import swal from "sweetalert";
 
 
 
 const Register = () => {
-    const {createUser}=useContext(AuthContext);
+    const [showPassword, setShowPassword] = useState(false);
+    const { createUser, user } = useContext(AuthContext);
+    const auth = getAuth(app);
+    const provider = new GoogleAuthProvider();
+    const handleGoogleSignIn = () => {
+        signInWithPopup(auth, provider)
+            .then(() => {
+                swal("Welcome!", "Log In successfully!", "success");
+            })
+            .catch(() => {
+                swal("Sorry!", "Try again!", "error");
+            })
+    }
 
     const handleRegister = e => {
         e.preventDefault();
         const form = new FormData(e.currentTarget);
-
         const name = form.get('name');
-        
         const email = form.get('email');
         const password = form.get('password');
+        setShowPassword(password);
         console.log(name, email, password);
 
         if (!/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/.test(password)) {
-            alert("Minimum eight characters, at least one letter, one number and one special character");
-            
+            swal("Ohh Nooooo!", "Minimum 8 characters with minimum a CAPITAL letter, a small letter, a number and a special Character!", "error");
         }
-        else{
-            alert("Fine");
-            createUser(email, password).then((result)=> {
-                console.log(result.user)});
+        else {
+            swal("Go ahead!", "You are in right track!", "success");
+            createUser(email, password)
+                .then((result) => {
+                    console.log(result.user)
+                    swal("Congratulations!", "Created successfully!", "success");
+                    sendEmailVerification(result.currentUser)
+                        .then(() => {
+                            swal("Welcome!", "Check your mail!", "success");
+                        });
+                });
         }
-        // create user
-    //     createUser(email, password)
-    //         .then(result => {
-    //             console.log(result.user)
-    //         })
-    //         .catch(error => {
-    //             console.error(error)
-    //         })
+
 
     }
 
 
     return (
-        <div className="px-14 mx-auto">
-            <div className="py-10 flex justify-center items-center" style={{ backgroundImage: 'url(https://i.ibb.co/d28FwhB/wedding-1846114-960-720.jpg'}}>
-                <div className="rounded-2xl bg-green-900 text-white">
-                    <div className="shadow-2xl">
-                        <form onSubmit={handleRegister} className="card-body w-[500px]">
-                        <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text text-white text-2xl font-semibold">Name</span>
-                                </label>
-                                <input type="name" name="name"  placeholder="Name" className="input input-bordered text-black" required />
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text text-white text-2xl font-semibold">Email</span>
-                                </label>
-                                <input type="email" name="email" placeholder="Email" className="input input-bordered text-black" required />
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text text-white text-2xl font-semibold">Password</span>
-                                </label>
-                                <input type="password" name="password"  placeholder="Password" className="input input-bordered text-black" required />
-                                <label className="label">
-                                    <a href="#" className="label-text-alt text-white link link-hover font-semibold">Forgot password?</a>
-                                </label>
-                            </div>
-                            <div className="form-control mt-6">
-                                <button className="bg-red-700 font-bold text-center text-white p-3 rounded-lg">Registration</button>
-                            </div>
-                        </form>
-                        
-                        <p className="flex p-10 font-semibold"> Are you old user? Please <Link to="/login" className="px-2"><span> Login</span></Link></p>
-                        
-                        
+        <div className="px-14 mx-auto shadow-2xl">
+            {user ? <div className="py-10 text-center font-bold">
+                <p className="my-3">Welcome to our World</p>
+                <p className="my-3">Name: {user?.displayName}</p>
+                <img src={user?.photoURL} alt="" className="rounded-full mx-auto my-3" />
+                <p className="my-3">Email: {user?.email}</p>
+            </div> :
+                <>
+                    <form onSubmit={handleRegister} className="w-full">
+                        <div className="form-control mb-3">
+                            <label className="label">
+                                <span className="label-text text-black text-2xl font-semibold">Name</span>
+                            </label>
+                            <input type="name" name="name" placeholder="Name" className="input input-bordered text-black" required />
+                        </div>
+                        <div className="form-control mb-3">
+                            <label className="label">
+                                <span className="label-text text-black text-2xl font-semibold">Email</span>
+                            </label>
+                            <input type="email" name="email" placeholder="Email" className="input input-bordered text-black" required />
+                        </div>
+                        <div className="form-control relative mb-3">
+                            <label className="label">
+                                <span className="label-text text-black text-2xl font-semibold">Password</span>
+                            </label>
+                            <input
+                                type={showPassword ? "text" : "password"}
+                                name="password"
+                                placeholder="Password"
+                                className="input input-bordered text-black" required />
+                            <span className="absolute text-4xl right-2 bottom-2" onClick={() => setShowPassword(!showPassword)}>
+                                {
+                                    showPassword ? <BsEye></BsEye> : <BsEyeSlash></BsEyeSlash>
+                                }
+                            </span>
+                        </div>
+                        <input type="checkbox" name="terms" id="terms" required /> Accept terms and conditions
+                        <div className="form-control mt-6">
+                            <button className="bg-red-700 font-bold text-center text-black p-3 rounded-lg">Registration</button>
+                        </div>
+                    </form>
+                    <p className="flex p-2 font-semibold"> Are you old user? Please <Link to="/login" className="px-2"><span> Login</span></Link></p>
+                    <h3 className="text-center text-3xl p-3 font-bold"> Or </h3>
+                    <div className="flex justify-center items-center pb-5">
 
-                    </div>
-
-
-                    <h3 className="text-center text-3xl p-5 font-bold"> Or </h3>
-                    <div className="flex justify-center items-center gap-10 mb-10">
-            
-                        <Link className=" gap-2 flex justify-center items-center">
+                        <Link onClick={handleGoogleSignIn} className=" gap-2 flex justify-center items-center">
                             <BsGoogle className="text-2xl"></BsGoogle>
                             <button className="p-5 btn">Google</button>
                         </Link>
                     </div>
-                </div>
-            </div>
+                </>
+            }
         </div>
     );
 };
