@@ -16,20 +16,21 @@ const myCreatedRoute = createBrowserRouter([
         path: "/",
         element: <MainLayout></MainLayout>,
         errorElement: <ErrorPage></ErrorPage>,
+
         children: [
             {
                 path: "/",
                 element: <Home></Home>,
-                loader: () => fetch('SocialEvents.JSON')
+                loader: () => fetch('/socialEvents.json')
             },
             {
                 path: "/aboutUs",
-                element: <PrivateRoute><AboutUs></AboutUs> </PrivateRoute>
+                element: <AboutUs></AboutUs>
             },
             {
                 path: "/explore",
-                element: <PrivateRoute><Explore></Explore></PrivateRoute>,
-                loader: () => fetch('Projects.JSON')
+                element: <Explore></Explore>,
+                loader: () => fetch('/projects.json')
             },
             {
                 path: "/login",
@@ -46,7 +47,7 @@ const myCreatedRoute = createBrowserRouter([
             {
                 path: "/services/:id",
                 element: <PrivateRoute><DetailsCard></DetailsCard></PrivateRoute>,
-                loader: () => fetch('SocialEvents.JSON')
+                loader: () => fetch('/socialEvents.json')
             }
         ]
     }

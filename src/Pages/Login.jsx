@@ -3,7 +3,7 @@ import { BsEye, BsEyeSlash, BsFacebook, BsGithub, BsGoogle } from "react-icons/b
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import AuthProvider, { AuthContext } from "../Firebase/AuthProvider";
 import { Result } from "postcss";
-import { GoogleAuthProvider, getAuth, sendPasswordResetEmail, signInWithPopup } from "firebase/auth";
+import { GoogleAuthProvider, getAuth, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import app from "../firebase/firebase.config";
 import swal from "sweetalert";
 
@@ -18,6 +18,7 @@ const Login = () => {
         signInWithPopup(auth, provider)
             .then(()=>{
                 swal("Welcome!", "Log In successfully!", "success");
+                navigate(location?.state ? location.state : '/');
             })
             .catch(()=>{
                 swal("Sorry!", "Try again!", "error");
@@ -36,13 +37,11 @@ const Login = () => {
         const password = form.password.value;
         setShowPassword(password);
         console.log(email, password);
-        signIn(email, password)
+        signInWithEmailAndPassword(auth, email, password)
             .then(result => {
                 console.log(result.user);
                 swal("Welcome!", "Log In successfully!", "success");
-                // navigate after login
                 navigate(location?.state ? location.state : '/');
-
             })
             .catch(error => {
                 console.log(error);
@@ -114,6 +113,7 @@ const Login = () => {
                                 </span>
                                 <label className="label">
                                     <a onClick={handleResetPassword} href="#" className="label-text-alt text-black link link-hover font-semibold">Forgot password?</a>
+                                    {/* <a onClick={handleResetPassword} href="#" className="label-text-alt text-black link link-hover font-semibold">Forgot password?</a> */}
                                 </label>
                             </div>
                             <div className="form-control mt-6">

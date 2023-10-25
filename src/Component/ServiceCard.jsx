@@ -7,11 +7,11 @@ const ServiceCard = ({service}) => {
     return (
         <div>
             <div className="card w-[320px] h-[450px] bg-base-100 shadow-xl">
-                                <img src={service.img} alt="" />
+                                <img className="rounded-lg" src={service.img} alt="" />
                                 <div className="card-body">
                                     <h2 className="card-title">{title}</h2>
                                     <p className="text-black font-semibold">{service.short_description}</p>
-                                    <p className="text-2xl font-bold ">Price: {service.price}</p>
+                                    <p className="text-2xl font-bold ">Price: ${service.price}</p>
 
                                     <div className="card-actions ">
                                         <Link to={`/services/${id}`} className="w-full">

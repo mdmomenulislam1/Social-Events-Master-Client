@@ -42,7 +42,7 @@ const ServiceDetailsCard = ({ service }) => {
         <div className="py-10">
           <h2 className="text-4xl font-bold mb-4">{title}</h2>
           <p className="text-justify font-normal">{description}</p>
-          <p className="text-3xl font-bold my-3">Booking Money:  {price}</p>
+          <p className="text-3xl font-bold my-3">Booking Money: ${price}</p>
         </div>
 
         <button onClick={handleAddToService} className="p-5 bg-black text-white w-full font-bold rounded-full">Book Now</button>

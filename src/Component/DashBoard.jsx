@@ -63,7 +63,7 @@ const DashBoard = () => {
         </div>
 
         {noFound ? (
-          <p className="h-[80vh] flex justify-center items-center">{noFound}</p>
+          <p className="h-[80vh] flex justify-center items-center text-3xl font-bold">{noFound}</p>
         ) : (
           <div>
             {order.length > 0 && (

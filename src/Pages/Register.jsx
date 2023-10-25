@@ -42,6 +42,7 @@ const Register = () => {
                 .then((result) => {
                     console.log(result.user)
                     swal("Congratulations!", "Created successfully!", "success");
+                    navigate(location?.state ? location.state : '/');
                     sendEmailVerification(result.currentUser)
                         .then(() => {
                             swal("Welcome!", "Check your mail!", "success");
