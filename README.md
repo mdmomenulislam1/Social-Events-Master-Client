@@ -10,3 +10,26 @@ To simplify event coordination, the website offers an array of RSVP and guest ma
 
 ## Event Website and Promotion:
 The website empowers users to create personalized event websites with user-friendly templates. These event websites serve as a central hub for showcasing event details, photos, and RSVP options, enhancing event promotion. To increase event visibility, users can seamlessly share event information on popular social media platforms, extending their reach to potential attendees and driving engagement.
+
+
+## Used Technologies
+
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=tailwind,firebase,react" />
+  </a>
+</p>
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=html,css,js,github,vscode" />
+  </a>
+</p>
+
+## Used Pakage
+- aos
+- axios
+- react-icon
+- react-slick
+- slick-carousel
+- styled-components
+- sweetalert
